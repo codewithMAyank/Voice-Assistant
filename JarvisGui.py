@@ -40,16 +40,16 @@ class MainThread(QThread):
             audio=r.listen(source)
 
         try: 
-            speak("Recognizing .. .. .!!")
+            speak("initializing .. .. .!!")
             print("Recognizing .. .. .!!")
-            speak("Getting information .. .. .. !!")
+            speak("Getting info .. .. .. !!")
             print("Getting information .. .. .. !!")
             query = r.recognize_google(audio , language='en-in').lower()
             speak(f"You said :- {query}\n")
             print(f"You said :- {query}\n")
 
         except Exception : 
-            speak('Sorry sir! I didn\'t get that! Try typing the command!')
+            speak('Sorry sir! I can not see the result!')
             query = str(input('Command: '))
             return"None"
         return query.lower()    
