@@ -32,8 +32,8 @@ class MainThread(QThread):
     def takecommand(self):
         r=sr.Recognizer()
         with sr.Microphone() as source:
-            speak("Listening .. .. .. !!")
-            print("Listening .. .. .. !!")
+            speak("i listen your magic words.. .. .. !!")
+            print("i listen your magical words .. .. .. !!")
             r.pause_threshold= 1
             r.adjust_for_ambient_noise(source , duration=1)
             r.energy_threshold= 400
